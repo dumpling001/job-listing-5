@@ -59,7 +59,6 @@ class JobsController < ApplicationController
   def ilike
     @job = Job.find(params[:id])
     @likes = @job.likes
-    current_user.likes.is_liked = false    
     @job.likes.is_liked = false
     @job.save
     redirect_to :back
@@ -68,7 +67,7 @@ class JobsController < ApplicationController
   def unlike
     @job = Job.find(params[:id])
     @likes = @job.likes
-    current_user.likes.is_liked = true
+    @job.likes.is_liked = true
     @job.save
     redirect_to :back
   end
