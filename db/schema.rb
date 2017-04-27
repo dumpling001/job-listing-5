@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170427072215) do
+ActiveRecord::Schema.define(version: 20170427090657) do
 
   create_table "job_to_users", force: :cascade do |t|
     t.integer  "job_id"
@@ -39,8 +39,10 @@ ActiveRecord::Schema.define(version: 20170427072215) do
 
   create_table "likes", force: :cascade do |t|
     t.integer  "job_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.boolean  "is_liked",   default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "resumes", force: :cascade do |t|

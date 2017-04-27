@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :resumes
   has_many :jobs
+  has_many :likes
 
   has_many :job_to_user
   has_many :participated_jobs, :through => :job_to_user, :source => :job

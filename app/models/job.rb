@@ -1,5 +1,6 @@
 class Job < ApplicationRecord
   has_many :resumes
+  has_many :likes
   belongs_to :workplace
   belongs_to :user
 
