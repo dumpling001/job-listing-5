@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     member do
       post :inbox
       post :outbox
+      post :ilike
+      post :unlike
     end
     resources :resumes
     collection do

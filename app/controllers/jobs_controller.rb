@@ -56,6 +56,23 @@ class JobsController < ApplicationController
     redirect_to job_path(@job)
   end
 
+  def ilike
+    @job = Job.find(params[:id])
+    @likes = @job.likes
+    current_user.likes.is_liked = false    
+    @job.likes.is_liked = false
+    @job.save
+    redirect_to :back
+  end
+
+  def unlike
+    @job = Job.find(params[:id])
+    @likes = @job.likes
+    current_user.likes.is_liked = true
+    @job.save
+    redirect_to :back
+  end
+
 
 
   protected

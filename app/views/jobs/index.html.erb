@@ -24,7 +24,20 @@
   <tbody>
   <% @jobs.each do |job| %>
   <tr>
-    <td><%= link_to(job.title, job_path(job)) %></td>
+    <td>
+
+      <%= link_to(job.title, job_path(job)) %>
+
+      <% if job.likes.is_liked %>
+
+        <%= link_to("like", ilike_job_path(job), :method => :post, :class => "btn btn-xs btn-default") %>
+      <% else %>
+        <%= link_to("unlike", unlike_job_path(job), :method => :post, :class => "btn btn-xs btn-default") %>
+      <% end %>
+    </td>
+
+
+    </td>
     <td><%= job.workplace.name %></td>
     <td><%= job.wage_lower_bound %></td>
     <td><%= job.wage_upper_bound %></td>
