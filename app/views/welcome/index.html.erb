@@ -1,3 +1,23 @@
+
+<div data-retina="1281x688" id="multiscreen-cont" style="margin-top: -20px;">
+          <div class="container">
+            <h2 class="gwd">
+              追逐梦想、合作梦想
+            </h2>
+            <p>
+              尽在Ruby梦想手绘站
+            </p>
+          </div>
+
+          <div id="multi-screen-mobile">
+            <img alt="Mobile" src="<%= image_url 'happychild.png' %>">
+          </div>
+          <div id="multi-screen-tablet">
+            <img alt="Tablet" src="<%= image_url 'fireballoon.png' %>">
+          </div>
+</div>
+
+
 <div id="myCarousel" >
       <!-- Indicators -->
       <div class="carousel-inner">
@@ -8,62 +28,13 @@
               <!-- hot jobs -->
               <%= render "hotjobs" %>
               <!-- hot jobs -->
-              <p class="pull-right"><a class="btn btn-lg btn-danger" href="/jobs" role="button">查看全部工作</a></p>
+
+           <%= render "city_images" %>
+           <div class="row">
+             <p class="pull-right"><a class="btn btn-lg btn-danger" href="/jobs" role="button">查看全部工作</a></p>
+           </div>
            </div>
 
         </div>
      </div>
-</div>
-
-<div class="city-item">
-  <div class="container-fluid">
-    <div class="col-md-12 text-center">
-      <h1 style="padding: 30px 0px 10px 0px;">热门城市招聘</h1>
-    </div>
-
-  <div class="row texi-center">
-    <div class="col-xs-3 text-center">
-      <a href="/jobs?workplace=北京">
-        <img class="img-circle" src="<%= image_url 'beijing.jpg' %>" alt="北京">
-      </a>
-    </div>
-
-
-    <div class="col-xs-3 text-center">
-      <a href="/jobs?workplace=深圳">
-        <img class="img-circle" src="<%= image_url 'shenzhen.jpg' %>" alt="深圳">
-      </a>
-   </div>
-
-   <div class="col-xs-3 text-center">
-     <a href="/jobs?workplace=上海">
-       <img class="img-circle" src="<%= image_url 'shanghai.jpg' %>" alt="上海">
-     </a>
-  </div>
-
-  <div class="col-xs-3 text-center">
-      <a href="/jobs?workplace=杭州">
-        <img class="img-circle" src="<%= image_url 'hangzhou.jpg' %>" alt="杭州">
-      </a>
-   </div>
- </div>
-
-
-
-    <!-- beijing -->
-    <%= render "beijing" %>
-    <!-- beijing -->
-
-    <!-- shenzhen -->
-    <%= render "shenzhen" %>
-    <!-- shenzhen -->
-
-    <!-- shanghai -->
-    <%= render "shanghai" %>
-    <!-- shanghai -->
-
-    <!-- hangzhou -->
-    <%= render "hangzhou" %>
-    <!-- hangzhou -->
-  </div>
 </div>

@@ -31,8 +31,30 @@
   margin-bottom: 100px;
 }
 
+.navbar {
+  min-height: 70px;
+  padding: 20px;
+}
+
+.navbar-inverse {
+  background: #fafafa;
+}
+
+.navbar-inverse, .navbar-inverse .navbar-toggle {
+  border-color: transparent;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #ebb000;
+  // background-color: #585858;
+}
+
 .navbar-inverse{
   border-radius: 0px;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #ebb000;
 }
 
 footer {
@@ -64,13 +86,13 @@ footer {
 }
 
 #myCarousel {
-  margin: -20px -15px 0px -15px;
+  margin: 0px -15px 0px -15px;
 }
 
 .carousel-caption {
     left: 30%;
     right: 5%;
-    padding-top: 30px;
+    top: 6%;
 }
 
 #hiddenbutton {
@@ -257,4 +279,57 @@ footer {
   padding-left: 15px;
   padding-bottom: 15px;
   font-family: PingFangSC-Medium, Arial, Helvetica, sans-serif;
+}
+
+/* google website designer */
+
+#multiscreen-cont{-moz-background-size:cover;-o-background-size:cover;-webkit-background-size:cover;background:image_url("multi-screen-background2.jpg") no-repeat center center;background-size:cover;height:600px;margin-top:-2px;overflow:hidden;padding-top:68px;position:relative;-ms-background-size:cover}
+#multiscreen-cont h2{color:#333;font-size:36px;margin:0 auto 20px;text-align:center;width:62%}
+#multiscreen-cont p{color:#333;margin:0 auto;text-align:center;width:62%}
+#multiscreen-cont #multi-screen-tablet{-moz-transform:rotate(3deg);-ms-transform:rotate(3deg);-o-transform:rotate(3deg);-webkit-transform:rotate(3deg);bottom:-11px;left:46%;position:absolute;transform:rotate(3deg)}
+#multiscreen-cont #multi-screen-mobile{-moz-transform:rotate(-4deg);-ms-transform:rotate(-4deg);-o-transform:rotate(-4deg);-webkit-transform:rotate(-4deg);bottom:50px;left:30%;overflow:hidden;position:absolute;transform:rotate(-4deg)}
+
+@media only screen and (max-width:1024px){#multiscreen-cont #multi-screen-mobile{left:25%}
+}
+@media only screen and (max-width:1000px){.container{max-width:980px;padding:0 1%;width:94%}
+#home-page .container img{margin:0 auto;width:100%}
+#multiscreen-cont h2{padding-left:10%;width:80%}
+#multiscreen-cont p{padding-left:10%;width:50%}
+#multiscreen-cont #multi-screen-mobile{left:16%}
+#top-features-cont .container{width:100%}
+#features-cont .feature .feature-writeup{margin-top:0;width:40%}
+#support-cont .support-type img{width:auto}
+#gwd-header .hero-animation-cont{background-size:contain;background-position:center bottom;height:350px;width:100%}
+}
+
+@media only screen and (max-width:720px){#gwd-header #nav,.hero-animation-cont{display:none}
+.mobile-only{display:block}
+#gwd-header h1{font-size:4.1em;line-height:1.2;margin:10px 0 35px}
+#gwd-header h1 span{display:block;margin:0 auto 15px}
+#multiscreen-cont h2{line-height:1.2}
+#multiscreen-cont p{width:80%}
+#multiscreen-cont #multi-screen-mobile{left:0}
+#top-features-cont{padding:60px 0 40px}
+#top-features-cont .container{width:100%}
+#top-features-cont .laptop-left,#top-features-cont .laptop-right{float:none;margin-bottom:40px;margin-top:0;width:100%}
+#features-cont{padding:0 0 40px}
+#features-cont .feature{text-align:center}
+#features-cont .feature .fl,#features-cont .feature .fr{float:none}
+#features-cont .feature img{max-width:none}
+#features-cont .feature .feature-animation{margin:0 auto}
+#features-cont .feature .feature-writeup{margin:20px auto;width:80%}
+#features-cont .feature .feature-writeup h3{color:#333;font-size:2.4em;line-height:1.1;margin-bottom:15px}
+#features-cont .feature .feature-writeup p{width:100%}
+#support-cont .container{padding:0 4.5%;width:90%}
+#support-cont .container .support-type img{margin-right:27px}
+#support-cont .container .support-type img#community-icon{margin-right:15px}
+#multiscreen-cont #multi-screen-tablet{left:36%}
+}
+
+@media only screen and (max-width:480px){#multiscreen-cont #multi-screen-mobile{bottom:-48px;left:-32px}
+#multiscreen-cont #multi-screen-mobile img,#multiscreen-cont #multi-screen-tablet img{width:87%}
+#multiscreen-cont #multi-screen-tablet{bottom:-80px;left:135px;width:387px}
+.gif-previewer{min-height:108px}
+#gwd-features-hero .page-nav{display:none}
+#maia-main #gwd-features-hero{padding-bottom:0}
 }
