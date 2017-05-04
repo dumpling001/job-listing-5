@@ -45,17 +45,13 @@
 }
 
 .navbar-inverse .navbar-toggle .icon-bar {
-  background-color: #ebb000;
-  // background-color: #585858;
+  background-color: #585858;
 }
 
 .navbar-inverse{
   border-radius: 0px;
 }
 
-.navbar-inverse .navbar-brand {
-  color: #ebb000;
-}
 
 footer {
   height: 100px;
@@ -1068,7 +1064,7 @@ body{background:#fff;font-family:'Open Sans',sans-serif}
 
 #gwd-header .hero-animation-cont{background:image-url("earthdream.jpg") no-repeat bottom center;height:430px;margin:12px auto 0;position:relative;width:900px}
 
-.en #gwd-header .hero-animation-cont{background-image:url(../images/animation-fallbacks/home/en/laptop-timeline.jpg)}
+.en #gwd-header .hero-animation-cont{background-image:image-url("earthdream.jpg")}
 
 .feature-video-home{height:192px;position:relative;right:76px;top:164px;z-index:111}
 
@@ -1870,7 +1866,7 @@ a.btn:hover,a.btn:focus{background-color:#2D6EDB;background-image:-webkit-gradie
 
 
 
-/* https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Product+Sans:400&lang=en */
+/* https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Product+Sans:400&lang= */
 /*
  * See: https://www.google.com/fonts/license/productsans
  */

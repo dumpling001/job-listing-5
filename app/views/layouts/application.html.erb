@@ -10,15 +10,16 @@
   </head>
 
   <body>
-    <div class="main">
-      <div class="container-fluid">
-        <div class="row">
+
            <%= render "common/navbar" %>
            <%= render "common/flashes" %>
+           <div id="maia-main" role="main">
+                   <div class="maia-teleport" id="content"></div>
+                   <div class="en" id="home-page">
            <%= yield%>
            </div>
-       </div>
-    </div>
+         </div>
+
 
          <%= render "common/footer" %>
 
