@@ -1,0 +1,39 @@
+<h2> <%= @job.title %> <%= @job.company %> </h2>
+
+<div class="group">
+  <span style="color:grey; font-weight:bold;"> <i class="glyphicon glyphicon-calendar"> </i> 刊登日期 <%= @job.created_at.to_s(:long) %> </span>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <span style="color:grey; font-weight:bold;"> <i class="glyphicon glyphicon-map-marker"></i> <%= @job.workplace.name %> </span>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <%= render_member_status(@job) %>&nbsp;&nbsp;&nbsp;&nbsp;
+  <%= @job.voters.count %>
+  <%= render_voter_status(@job) %>&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+  <span style="color:grey; font-weight:bold;" class="pull-right">
+   <%= render_job_warning(@job.wage_lower_bound) %>
+   <%= render_job_salary(@job.wage_lower_bound)%>  ~ <%= render_job_salary(@job.wage_upper_bound)%>
+   </span>
+</div>
+
+
+
+<hr>
+
+<div class="job-desc">
+  <p>
+    <%= render_job_description(@job) %>
+  </p>
+
+</div>
+<br>
+
+<div class="well">
+  <h4> 應徵方法 </h4>
+  <p>
+    请将您的Github账号、链接、简历发送至:
+    <%= @job.user.email %>或者
+    <%= link_to("点击此处投简历", new_job_resume_path(@job), :style => "font-size: 1em;") %>
+  </p>
+
+</div>

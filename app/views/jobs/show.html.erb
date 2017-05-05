@@ -1,23 +1,6 @@
+<div class="container">
 
-<div class="col-md-10 col-centered">
-  <div class="panel panel-default">
-  <!-- Default panel contents -->
-    <div class="panel-heading">
-      <h1> <%= @job.title %> </h1>
-    </div>
-    <div class="panel-body">
-      <span class="pull-left">
-        <td><%= render_member_status(@job) %></td> |
-        <td><%= @job.voters.count %></td>
-        <%= render_voter_status(@job) %> |
-        <%= @job.workplace.name %>
-      </span>
-    </div>
-    <div class="panel-body">
-         <td><%= simple_format(@job.description) %></td>
-    </div>
-
-  <div class="panel-footer">
-    <%= link_to("马上投简历！", new_job_resume_path(@job), :style => "font-size: 30px; text-decoration: underline;") %>
+  <div class="job-nav-bar">
+    <%= link_to("← 回工作列表", root_path, :class => "underline") %>
   </div>
-</div>
+  <%= render :partial => "jobs/preview_block" %>
