@@ -1,5 +1,7 @@
+
+<div class="container">
 <div class="dropdown clearfix pull-right">
-    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
       排序
         <span class="caret"></span>
     </button>
@@ -9,6 +11,7 @@
         <li><%= link_to("按照发表时间排序", jobs_path ) %></li>
     </ul>
 </div>
+<br><br>
 
 <table class="table table-boldered">
   <thead>
@@ -49,6 +52,7 @@
  </tbody>
 </table>
 
-<div class="text-center">
-  <%= will_paginate @jobs %>
+<nav aria-label="Page navigation" class="text-center">
+  <%= will_paginate @jobs, renderer: BootstrapPagination::Rails, class: "pagination pagination-sm" %>
+</nav>
 </div>
