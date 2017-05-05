@@ -3,7 +3,7 @@
 <%= simple_form_for [:admin, @job] do |f| %>
 
 <%= f.input :title %>
-<%= f.input :description %>
+<%= f.input :description,  :label => "工作敘述", :input_html => { :rows => 10, :data => { :provide => "markdown"} }, :hint => "使用 Markdown 語法" %>
 <%= f.input :wage_lower_bound, :label => "起薪" %>
 <%= f.input :wage_upper_bound, :label => "挑战薪资" %>
 <%= f.input :company, :label => "公司名称" %>

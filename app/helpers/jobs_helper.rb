@@ -28,9 +28,9 @@ module JobsHelper
        link_to("", upvote_job_path(job), method: :post, class: "fa fa-heart-o")
      end
   end
-
+  include ActionView::Helpers::TextHelper
   def render_job_description(job)
-    simple_format(job.description)
+    to_markdown(job.description)
   end
 
   def render_job_warning(salary)

@@ -18,6 +18,7 @@
 //= require bootstrap/modal
 //= require bootstrap/carousel
 //= require bootstrap/collapse
+//= require bootstrap-markdown-bundle
 //= require_tree .
 
 

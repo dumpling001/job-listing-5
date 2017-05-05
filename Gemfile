@@ -39,6 +39,8 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'seo_helper'
 gem 'awesome_rails_console'
+gem 'rails-bootstrap-markdown'
+gem 'redcarpet'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
